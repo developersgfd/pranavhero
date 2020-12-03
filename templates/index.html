@@ -1,0 +1,17 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+{% block bg %}
+{% endblock %}
+
+<div class="jumbotron text-center" style="background-color:white;">
+    <h1>Welcome to Hotel Management System</h1>
+    
+    {% if session.logged_in==NULL %}
+        <a href="/register" class="button">Register</a>
+        <a href="/login" class="button">Login</a>
+    {% else %}
+        <p>Hello, {{session.username}}</p>
+    {% endif %}
+</div>
+{% endblock %}

@@ -1,0 +1,33 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+<div class="row container-fluid">
+    <div class="col-md-12 m-auto">
+        <div class="card card-body">
+            <h1 class="text-center"><i class="fas fa-user"></i>Login</h1>
+            <form method="POST">
+                <div class="form-group">
+                    <div class="col-sm-auto">
+                        <input type="text" name="username" class="form-control form-control-sm validate"
+                            placeholder="Username" value={{request.form.username}}>
+                    </div>
+                </div>
+                <div class=" form-group">
+                    <div class="col-sm-auto">
+                        <input type="password" id="password" name="password"
+                            class="form-control form-control-sm validate" placeholder="Password"
+                            value={{request.form.password}}>
+                        <!-- Regular expression to set parameter for password -->
+                    </div>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-success btn-block"> Login </button>
+                    <p class="lead mt-4"> Don't Have An Account? <a href="/register">Register</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
